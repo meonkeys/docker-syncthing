@@ -1,5 +1,7 @@
 # docker-syncthing
 
+[![](https://imagelayers.io/badge/meonkeys/docker-syncthing:latest.svg)](https://imagelayers.io/?images=meonkeys/docker-syncthing:latest 'Get your own badge on imagelayers.io')
+
 Yet another [Syncthing](https://syncthing.net/) Docker container.
 
 See [`Dockerfile`](https://github.com/meonkeys/docker-syncthing/blob/master/Dockerfile) and [example `run.sh` script](https://github.com/meonkeys/docker-syncthing/blob/master/run.sh) for usage.
