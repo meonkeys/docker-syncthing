@@ -1,3 +1,9 @@
-See [`Dockerfile`](https://github.com/tianon/dockerfiles/blob/master/syncthing/Dockerfile) and [example `run.sh` script](https://github.com/tianon/dockerfiles/blob/master/syncthing/run.sh) for usage.
+# docker-syncthing
 
-If you're interested in inotify support, see [`tianon/syncthing-inotify`](https://registry.hub.docker.com/u/tianon/syncthing-inotify/).
+Yet another [Syncthing](https://syncthing.net/) Docker container.
+
+See [`Dockerfile`](https://github.com/meonkeys/docker-syncthing/blob/master/Dockerfile) and [example `run.sh` script](https://github.com/meonkeys/docker-syncthing/blob/master/run.sh) for usage.
+
+For inotify support simply run [syncthing-inotify](https://hub.docker.com/r/meonkeys/syncthing-inotify/) in a container next to your `syncthing` container. The rest is done for you.
+
+Forked from <https://github.com/tianon/dockerfiles/>.
