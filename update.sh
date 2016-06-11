@@ -10,5 +10,6 @@ current="$(git ls-remote --tags https://github.com/syncthing/syncthing.git | gre
 current="${current#v}"
 
 sed -ri 's/^(ENV SYNCTHING_VERSION) .*/\1 '"$current"'/' Dockerfile
+sed -ri 's/^(SYNCTHING_VERSION=).*/\1'"$current"'/' run.sh
 git commit -am "update Syncthing to latest (v$current)"
 git tag "v$current"

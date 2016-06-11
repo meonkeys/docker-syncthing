@@ -11,6 +11,8 @@ fi
 
 mkdir -p "$HOME/.config/syncthing"
 
+SYNCTHING_VERSION=0.13.5
+
 set -x
 
 docker run -d \
@@ -22,5 +24,6 @@ docker run -d \
 	-v /etc:/etc \
 	-v /mnt:/mnt \
 	--net host \
-	meonkeys/syncthing "$@"
+	"meonkeys/syncthing:v$SYNCTHING_VERSION" \
+	"$@"
 timeout 10s docker logs -f syncthing || true
