@@ -24,6 +24,6 @@ docker run -d \
 	-v /etc:/etc \
 	-v /mnt:/mnt \
 	--net host \
-	"meonkeys/syncthing:v$SYNCTHING_VERSION" \
+	"meonkeys/syncthing:$SYNCTHING_VERSION" \
 	"$@"
 timeout 10s docker logs -f syncthing || true
