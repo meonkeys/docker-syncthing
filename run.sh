@@ -18,6 +18,7 @@ set -x
 docker run -d \
 	--name syncthing \
 	--restart always \
+	--env="GOMAXPROCS=2" \
 	-u "$(id -u):$(id -g)" \
 	-v "$HOME:$HOME" \
 	-v "$HOME/.config/syncthing:/home/user/.config/syncthing" \
