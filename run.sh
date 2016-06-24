@@ -1,8 +1,8 @@
 #!/bin/bash
 
-
 set -o errexit
 set -o nounset
+set -o pipefail
 
 if [ "$HOME" = '/home/user' ]; then
   echo >&2 'uh oh, HOME=/home/user'
@@ -27,4 +27,5 @@ docker run -d \
   --net host \
   "meonkeys/syncthing:$SYNCTHING_VERSION" \
   "$@"
+
 timeout 10s docker logs -f syncthing || true
