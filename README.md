@@ -1,6 +1,6 @@
 # Syncthing in Docker
 
-[![](https://imagelayers.io/badge/meonkeys/syncthing:latest.svg)](https://imagelayers.io/?images=meonkeys/syncthing:latest 'Get your own badge on imagelayers.io')
+[![Docker Pulls](https://img.shields.io/docker/pulls/meonkeys/syncthing.svg)](https://hub.docker.com/r/meonkeys/syncthing/)
 
 Yet another [Syncthing](https://syncthing.net/) Docker container/image.
 
