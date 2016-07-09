@@ -13,3 +13,4 @@ sed -ri 's/^(ENV SYNCTHING_VERSION) .*/\1 '"$current"'/' Dockerfile
 sed -ri 's/^(SYNCTHING_VERSION=).*/\1'"$current"'/' run.sh
 git commit -am "update Syncthing to latest (v$current)"
 git tag "$current"
+echo Now run: git push --tags
