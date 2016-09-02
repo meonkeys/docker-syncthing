@@ -10,7 +10,7 @@ RUN gpg --keyserver pgp.mit.edu --recv-keys 37C84554E7E0A261E4F76E1ED26E6ED00065
 ENV SYNCTHING_VERSION 0.14.5
 
 RUN set -x \
-	&& apt-get update && apt-get install -y curl --no-install-recommends && rm -rf /var/lib/apt/lists/* \
+	&& apt-get update && apt-get -y dist-upgrade && apt-get install -y curl --no-install-recommends && rm -rf /var/lib/apt/lists/* \
 	&& tarball="syncthing-linux-amd64-v${SYNCTHING_VERSION}.tar.gz" \
 	&& curl -fSL "https://github.com/syncthing/syncthing/releases/download/v${SYNCTHING_VERSION}/"{"$tarball",sha1sum.txt.asc} -O \
 	&& apt-get purge -y --auto-remove curl \
